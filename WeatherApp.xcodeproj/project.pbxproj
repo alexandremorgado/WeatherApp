@@ -1,0 +1,708 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F6B8FA46277B5063003E3BAC /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B8FA45277B5063003E3BAC /* Tests_iOS.swift */; };
+		F6B8FA48277B5063003E3BAC /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B8FA47277B5063003E3BAC /* Tests_iOSLaunchTests.swift */; };
+		F6B8FA52277B5064003E3BAC /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B8FA51277B5064003E3BAC /* Tests_macOS.swift */; };
+		F6B8FA54277B5064003E3BAC /* Tests_macOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B8FA53277B5064003E3BAC /* Tests_macOSLaunchTests.swift */; };
+		F6B8FA55277B5064003E3BAC /* WeatherAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B8FA2D277B5062003E3BAC /* WeatherAppApp.swift */; };
+		F6B8FA56277B5064003E3BAC /* WeatherAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B8FA2D277B5062003E3BAC /* WeatherAppApp.swift */; };
+		F6B8FA57277B5064003E3BAC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B8FA2E277B5062003E3BAC /* ContentView.swift */; };
+		F6B8FA58277B5064003E3BAC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B8FA2E277B5062003E3BAC /* ContentView.swift */; };
+		F6B8FA59277B5064003E3BAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6B8FA2F277B5063003E3BAC /* Assets.xcassets */; };
+		F6B8FA5A277B5064003E3BAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6B8FA2F277B5063003E3BAC /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F6B8FA42277B5063003E3BAC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6B8FA28277B5061003E3BAC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F6B8FA33277B5063003E3BAC;
+			remoteInfo = "WeatherApp (iOS)";
+		};
+		F6B8FA4E277B5064003E3BAC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6B8FA28277B5061003E3BAC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F6B8FA39277B5063003E3BAC;
+			remoteInfo = "WeatherApp (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F6B8FA2D277B5062003E3BAC /* WeatherAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppApp.swift; sourceTree = "<group>"; };
+		F6B8FA2E277B5062003E3BAC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F6B8FA2F277B5063003E3BAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F6B8FA34277B5063003E3BAC /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6B8FA3A277B5063003E3BAC /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6B8FA3C277B5063003E3BAC /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		F6B8FA41277B5063003E3BAC /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6B8FA45277B5063003E3BAC /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
+		F6B8FA47277B5063003E3BAC /* Tests_iOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOSLaunchTests.swift; sourceTree = "<group>"; };
+		F6B8FA4D277B5063003E3BAC /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6B8FA51277B5064003E3BAC /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
+		F6B8FA53277B5064003E3BAC /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F6B8FA31277B5063003E3BAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6B8FA37277B5063003E3BAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6B8FA3E277B5063003E3BAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6B8FA4A277B5063003E3BAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F6B8FA27277B5061003E3BAC = {
+			isa = PBXGroup;
+			children = (
+				F6B8FA2C277B5062003E3BAC /* Shared */,
+				F6B8FA3B277B5063003E3BAC /* macOS */,
+				F6B8FA44277B5063003E3BAC /* Tests iOS */,
+				F6B8FA50277B5064003E3BAC /* Tests macOS */,
+				F6B8FA35277B5063003E3BAC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F6B8FA2C277B5062003E3BAC /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				F6B8FA2D277B5062003E3BAC /* WeatherAppApp.swift */,
+				F6B8FA2E277B5062003E3BAC /* ContentView.swift */,
+				F6B8FA2F277B5063003E3BAC /* Assets.xcassets */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		F6B8FA35277B5063003E3BAC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F6B8FA34277B5063003E3BAC /* WeatherApp.app */,
+				F6B8FA3A277B5063003E3BAC /* WeatherApp.app */,
+				F6B8FA41277B5063003E3BAC /* Tests iOS.xctest */,
+				F6B8FA4D277B5063003E3BAC /* Tests macOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F6B8FA3B277B5063003E3BAC /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				F6B8FA3C277B5063003E3BAC /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		F6B8FA44277B5063003E3BAC /* Tests iOS */ = {
+			isa = PBXGroup;
+			children = (
+				F6B8FA45277B5063003E3BAC /* Tests_iOS.swift */,
+				F6B8FA47277B5063003E3BAC /* Tests_iOSLaunchTests.swift */,
+			);
+			path = "Tests iOS";
+			sourceTree = "<group>";
+		};
+		F6B8FA50277B5064003E3BAC /* Tests macOS */ = {
+			isa = PBXGroup;
+			children = (
+				F6B8FA51277B5064003E3BAC /* Tests_macOS.swift */,
+				F6B8FA53277B5064003E3BAC /* Tests_macOSLaunchTests.swift */,
+			);
+			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F6B8FA33277B5063003E3BAC /* WeatherApp (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6B8FA5D277B5064003E3BAC /* Build configuration list for PBXNativeTarget "WeatherApp (iOS)" */;
+			buildPhases = (
+				F6B8FA30277B5063003E3BAC /* Sources */,
+				F6B8FA31277B5063003E3BAC /* Frameworks */,
+				F6B8FA32277B5063003E3BAC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WeatherApp (iOS)";
+			productName = "WeatherApp (iOS)";
+			productReference = F6B8FA34277B5063003E3BAC /* WeatherApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F6B8FA39277B5063003E3BAC /* WeatherApp (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6B8FA60277B5064003E3BAC /* Build configuration list for PBXNativeTarget "WeatherApp (macOS)" */;
+			buildPhases = (
+				F6B8FA36277B5063003E3BAC /* Sources */,
+				F6B8FA37277B5063003E3BAC /* Frameworks */,
+				F6B8FA38277B5063003E3BAC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WeatherApp (macOS)";
+			productName = "WeatherApp (macOS)";
+			productReference = F6B8FA3A277B5063003E3BAC /* WeatherApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F6B8FA40277B5063003E3BAC /* Tests iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6B8FA63277B5064003E3BAC /* Build configuration list for PBXNativeTarget "Tests iOS" */;
+			buildPhases = (
+				F6B8FA3D277B5063003E3BAC /* Sources */,
+				F6B8FA3E277B5063003E3BAC /* Frameworks */,
+				F6B8FA3F277B5063003E3BAC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F6B8FA43277B5063003E3BAC /* PBXTargetDependency */,
+			);
+			name = "Tests iOS";
+			productName = "Tests iOS";
+			productReference = F6B8FA41277B5063003E3BAC /* Tests iOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		F6B8FA4C277B5063003E3BAC /* Tests macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6B8FA66277B5064003E3BAC /* Build configuration list for PBXNativeTarget "Tests macOS" */;
+			buildPhases = (
+				F6B8FA49277B5063003E3BAC /* Sources */,
+				F6B8FA4A277B5063003E3BAC /* Frameworks */,
+				F6B8FA4B277B5063003E3BAC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F6B8FA4F277B5064003E3BAC /* PBXTargetDependency */,
+			);
+			name = "Tests macOS";
+			productName = "Tests macOS";
+			productReference = F6B8FA4D277B5063003E3BAC /* Tests macOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F6B8FA28277B5061003E3BAC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					F6B8FA33277B5063003E3BAC = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					F6B8FA39277B5063003E3BAC = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					F6B8FA40277B5063003E3BAC = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = F6B8FA33277B5063003E3BAC;
+					};
+					F6B8FA4C277B5063003E3BAC = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = F6B8FA39277B5063003E3BAC;
+					};
+				};
+			};
+			buildConfigurationList = F6B8FA2B277B5061003E3BAC /* Build configuration list for PBXProject "WeatherApp" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F6B8FA27277B5061003E3BAC;
+			productRefGroup = F6B8FA35277B5063003E3BAC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F6B8FA33277B5063003E3BAC /* WeatherApp (iOS) */,
+				F6B8FA39277B5063003E3BAC /* WeatherApp (macOS) */,
+				F6B8FA40277B5063003E3BAC /* Tests iOS */,
+				F6B8FA4C277B5063003E3BAC /* Tests macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F6B8FA32277B5063003E3BAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6B8FA59277B5064003E3BAC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6B8FA38277B5063003E3BAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6B8FA5A277B5064003E3BAC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6B8FA3F277B5063003E3BAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6B8FA4B277B5063003E3BAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F6B8FA30277B5063003E3BAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6B8FA57277B5064003E3BAC /* ContentView.swift in Sources */,
+				F6B8FA55277B5064003E3BAC /* WeatherAppApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6B8FA36277B5063003E3BAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6B8FA58277B5064003E3BAC /* ContentView.swift in Sources */,
+				F6B8FA56277B5064003E3BAC /* WeatherAppApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6B8FA3D277B5063003E3BAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6B8FA48277B5063003E3BAC /* Tests_iOSLaunchTests.swift in Sources */,
+				F6B8FA46277B5063003E3BAC /* Tests_iOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6B8FA49277B5063003E3BAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6B8FA54277B5064003E3BAC /* Tests_macOSLaunchTests.swift in Sources */,
+				F6B8FA52277B5064003E3BAC /* Tests_macOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F6B8FA43277B5063003E3BAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F6B8FA33277B5063003E3BAC /* WeatherApp (iOS) */;
+			targetProxy = F6B8FA42277B5063003E3BAC /* PBXContainerItemProxy */;
+		};
+		F6B8FA4F277B5064003E3BAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F6B8FA39277B5063003E3BAC /* WeatherApp (macOS) */;
+			targetProxy = F6B8FA4E277B5064003E3BAC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F6B8FA5B277B5064003E3BAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F6B8FA5C277B5064003E3BAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		F6B8FA5E277B5064003E3BAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SG6KES9EY6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alemorgado.WeatherApp;
+				PRODUCT_NAME = WeatherApp;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F6B8FA5F277B5064003E3BAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SG6KES9EY6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alemorgado.WeatherApp;
+				PRODUCT_NAME = WeatherApp;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F6B8FA61277B5064003E3BAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SG6KES9EY6;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alemorgado.WeatherApp;
+				PRODUCT_NAME = WeatherApp;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F6B8FA62277B5064003E3BAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SG6KES9EY6;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alemorgado.WeatherApp;
+				PRODUCT_NAME = WeatherApp;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		F6B8FA64277B5064003E3BAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SG6KES9EY6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alemorgado.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "WeatherApp (iOS)";
+			};
+			name = Debug;
+		};
+		F6B8FA65277B5064003E3BAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SG6KES9EY6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alemorgado.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "WeatherApp (iOS)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F6B8FA67277B5064003E3BAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SG6KES9EY6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alemorgado.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "WeatherApp (macOS)";
+			};
+			name = Debug;
+		};
+		F6B8FA68277B5064003E3BAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SG6KES9EY6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alemorgado.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "WeatherApp (macOS)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F6B8FA2B277B5061003E3BAC /* Build configuration list for PBXProject "WeatherApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6B8FA5B277B5064003E3BAC /* Debug */,
+				F6B8FA5C277B5064003E3BAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6B8FA5D277B5064003E3BAC /* Build configuration list for PBXNativeTarget "WeatherApp (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6B8FA5E277B5064003E3BAC /* Debug */,
+				F6B8FA5F277B5064003E3BAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6B8FA60277B5064003E3BAC /* Build configuration list for PBXNativeTarget "WeatherApp (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6B8FA61277B5064003E3BAC /* Debug */,
+				F6B8FA62277B5064003E3BAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6B8FA63277B5064003E3BAC /* Build configuration list for PBXNativeTarget "Tests iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6B8FA64277B5064003E3BAC /* Debug */,
+				F6B8FA65277B5064003E3BAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6B8FA66277B5064003E3BAC /* Build configuration list for PBXNativeTarget "Tests macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6B8FA67277B5064003E3BAC /* Debug */,
+				F6B8FA68277B5064003E3BAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F6B8FA28277B5061003E3BAC /* Project object */;
+}
