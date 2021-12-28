@@ -18,7 +18,7 @@ struct LocationService {
         return try await LocationService.fetchLocations(url: url)
     }
     
-    static func fetchLocation(byLatitude latitude: Double, and longitude: Double) async throws -> [Location] {
+    static func fetchLocation(byLatitude latitude: Double, andLongitude longitude: Double) async throws -> [Location] {
         let urlString = "https://www.metaweather.com/api/location/search?lattlong=\(latitude),\(longitude)"
         guard let url = URL(string: urlString) else { throw URLError(.badURL) }
         return try await LocationService.fetchLocations(url: url)
