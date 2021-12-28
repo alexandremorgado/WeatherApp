@@ -7,11 +7,10 @@
 
 import Foundation
  
+// Weather model according to Location API
 struct Location {
     let woeid: Int
     let title: String
 }
 
-extension Location: Codable {
-    
-}
+extension Location: Decodable { }

@@ -7,15 +7,22 @@
 
 import Foundation
 
+// Weather model according to MetaWeather API
 struct Weather: Identifiable, Equatable {
     let id: Int
+    let applicableDate: Date
     let maxTemp: Double
     let minTemp: Double
     let theTemp: Double
-    
+    let weatherStateName: String
+    let weatherStateAbbr: String
+    let airPressure: Double
+    let humidity: Double
+    let predictability: Double
 }
 
-extension Weather: Codable {
-    
-}
+extension Weather: Decodable { }
 
+struct LocationWeather: Decodable {
+    let consolidatedWeather: [Weather]
+}
