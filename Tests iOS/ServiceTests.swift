@@ -29,9 +29,19 @@ class ServicesTests: XCTestCase {
             XCTAssertGreaterThan(locationWeather.count, 0)
             XCTAssert(locationWeather[0].applicableDate.isSameDay(of: Date()))
         } catch {
-            XCTFail("Expected chopped vegetables, but failed \(error).")
+            XCTFail("Expected fetch weather for location, but failed \(error)")
         }
-        
+    }
+    
+    func testIntegration() async throws {
+        do {
+            let rioSearch = try await LocationService.fetchLocation(byText: "rio")
+            XCTAssertGreaterThan(rioSearch.count, 0)
+            let rioWeather = try await WeatherService.fetchWeather(location: rioSearch[0])
+            XCTAssertGreaterThan(rioWeather.count, 0)
+        } catch {
+            XCTFail("Could not fetch this location")
+        }
     }
     
 }
