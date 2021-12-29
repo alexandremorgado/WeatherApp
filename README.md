@@ -27,3 +27,6 @@ In order to mimimize the poor MetaWeather location searching the app uses MKLoca
 
 When searching in MetaWeather by coordinate it almost always returns locations. It works very well, but sometimes the service is not be able to find the exact city you are looking for. It looks MetaWeather location database is not as complete, so it returns the closest locations from the coordinate sent in parameters.   
 
+
+# STORY-6:5 day forecast 
+For a given location allow see the weather not only for current day, but also the forecast for next 5 days. 
