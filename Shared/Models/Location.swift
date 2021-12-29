@@ -13,7 +13,7 @@ import CoreLocation
 struct Location: Identifiable, Equatable {
     let woeid: Int
     let title: String
-    let lattLong: String
+    let lattLong: String?
     
     var id: Int { woeid }
 }
@@ -23,12 +23,13 @@ struct Location: Identifiable, Equatable {
 extension Location {
     
     var coordinate: CLLocationCoordinate2D? {
-        let coordComponents = lattLong.components(separatedBy: ",")
-        guard let latString = coordComponents.first,
-              let longString = coordComponents.last,
+        let coordComponents = lattLong?.components(separatedBy: ",")
+        guard let latString = coordComponents?.first?.trimmingCharacters(in: .whitespacesAndNewlines),
+              let longString = coordComponents?.last?.trimmingCharacters(in: .whitespacesAndNewlines),
               let lat = Double(latString),
-              let long = Double(longString)
-        else { return nil }
+              let long = Double(longString) else {
+                  return nil
+              }
         return CLLocationCoordinate2D(latitude: lat, longitude: long)
     }
     
