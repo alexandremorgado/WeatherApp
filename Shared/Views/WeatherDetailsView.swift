@@ -125,10 +125,9 @@ struct WeatherDetailsView: View {
     //MARK: - STORY-4
     func mapView(coordinate: CLLocationCoordinate2D) -> some View {
         Map(coordinateRegion: .constant(MKCoordinateRegion(center: coordinate, latitudinalMeters: 8000, longitudinalMeters: 500)))
-            .frame(minHeight: 188, maxHeight: .infinity)
+            .frame(minHeight: 168, maxHeight: .infinity)
             .cornerRadius(10)
             .padding(.horizontal)
-            .frame(minHeight: 168, maxHeight: .infinity)
     }
     
 }
