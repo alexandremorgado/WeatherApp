@@ -30,7 +30,11 @@ struct WeatherDetailsView: View {
                         weatherContentView(weather)
                     }
                 }
+                #if os(macOS)
+                .tabViewStyle(.automatic)
+                #elseif os(iOS)
                 .tabViewStyle(.page(indexDisplayMode: .always))
+                #endif
                 .layoutPriority(10)
                 
                 if let coordinate = location.coordinate {
@@ -42,7 +46,7 @@ struct WeatherDetailsView: View {
                 Spacer()
             }
         }
-        .colorScheme(.dark)
+        .preferredColorScheme(.dark)
         .onAppear {
             selectedWeatherIndex = 0
         }
@@ -66,6 +70,9 @@ struct WeatherDetailsView: View {
             
             stateView(weather)
             pressureAndHumidityView(weather)
+        }
+        .tabItem {
+            Text("\((weathers.firstIndex(of: weather) ?? 0) + 1)")
         }
     }
     

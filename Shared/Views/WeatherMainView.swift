@@ -6,7 +6,9 @@
 //
 
 import SwiftUI
+#if !os(macOS)
 import CoreLocationUI
+#endif
 
 struct WeatherMainView: View {
     
@@ -14,6 +16,14 @@ struct WeatherMainView: View {
     @StateObject var locationManager = LocationManager()
     
     @State private var searchQuery: String = ""
+    
+    var searchPlacement: SearchFieldPlacement {
+        #if os(iOS)
+        SearchFieldPlacement.navigationBarDrawer(displayMode: .always)
+        #else
+        SearchFieldPlacement.automatic
+        #endif
+    }
     
     var filteredSuggestions: [String] {
         viewModel.searchSuggestions.filter {
@@ -39,10 +49,15 @@ struct WeatherMainView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .navigationTitle("WeatherApp")
+            #if os(macOS)
+            .navigationViewStyle(.automatic)
+            .frame(minWidth: 400)
+            #else
             .navigationBarTitleDisplayMode(.inline)
+            #endif
             .searchable(
                 text: $searchQuery,
-                placement: .navigationBarDrawer(displayMode: .always),
+                placement: searchPlacement, 
                 prompt: "Search location"
             ) {
                 switch viewModel.viewStatus {
@@ -53,8 +68,10 @@ struct WeatherMainView: View {
                 }
             }
         }
+        #if !os(macOS)
         .navigationViewStyle(.stack)
-        .colorScheme(.dark)
+        #endif
+        .preferredColorScheme(.dark)
         .task {
             await viewModel.fetchLocationThenWeather(by: viewModel.initialLocation)
         }
@@ -90,10 +107,12 @@ struct WeatherMainView: View {
                 }
                 Spacer()
                     .frame(height: 10)
+                #if !os(macOS)
                 Text("Locations")
                     .font(.title3)
                     .fontWeight(.bold)
                 currentLocationButton
+                #endif
             } else {
                 Text("Insert a location and enter to search")
             }
@@ -102,6 +121,7 @@ struct WeatherMainView: View {
         
     }
     
+    #if !os(macOS)
     var currentLocationButton: some View  {
         LocationButton {
             viewModel.updateViewStatus(newStatus: .fetchingCurrentLocation)
@@ -109,7 +129,7 @@ struct WeatherMainView: View {
         }
         .cornerRadius(10)
     }
-    
+    #endif
     
 }
 

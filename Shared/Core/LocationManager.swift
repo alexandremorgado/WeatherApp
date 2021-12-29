@@ -6,7 +6,9 @@
 //
 
 import CoreLocation
+#if !os(macOS)
 import CoreLocationUI
+#endif
 
 class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     
