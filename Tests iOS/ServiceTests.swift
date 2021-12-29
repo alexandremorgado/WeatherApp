@@ -10,7 +10,7 @@ import XCTest
 // Test MetaWeather API
 class ServicesTests: XCTestCase {
     
-    let london = Location(woeid: 44418, title: "London")
+    let london = Location(woeid: 44418, title: "London", lattLong: "51.506321, -0.12714")
     
     func testLocations() async throws {
         // by query
@@ -39,6 +39,8 @@ class ServicesTests: XCTestCase {
             XCTAssertGreaterThan(rioSearch.count, 0)
             let rioWeather = try await WeatherService.fetchWeather(location: rioSearch[0])
             XCTAssertGreaterThan(rioWeather.count, 0)
+            let saoPauloSearch = try await LocationService.fetchLocation(byText: "sao paulo")
+            XCTAssertGreaterThan(saoPauloSearch.count, 0)
         } catch {
             XCTFail("Could not fetch this location")
         }

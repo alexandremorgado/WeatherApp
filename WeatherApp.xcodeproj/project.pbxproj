@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F62CC451277CF75F00B623B4 /* ViewStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B8FA8A277B9F54003E3BAC /* ViewStatus.swift */; };
 		F66E8866277C9079003BE537 /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66E8865277C9079003BE537 /* ViewModifiers.swift */; };
 		F66E8867277C9079003BE537 /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66E8865277C9079003BE537 /* ViewModifiers.swift */; };
 		F66E8869277CB1E4003BE537 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66E8868277CB1E4003BE537 /* BackgroundView.swift */; };
@@ -428,6 +429,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F62CC451277CF75F00B623B4 /* ViewStatus.swift in Sources */,
 				F6B8FA83277B622A003E3BAC /* LocationService.swift in Sources */,
 				F6B8FA89277B6BC9003E3BAC /* ServiceTests.swift in Sources */,
 				F6B8FA73277B54E6003E3BAC /* Weather.swift in Sources */,
