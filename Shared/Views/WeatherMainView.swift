@@ -53,6 +53,7 @@ struct WeatherMainView: View {
                 }
             }
         }
+        .navigationViewStyle(.stack)
         .colorScheme(.dark)
         .task {
             await viewModel.fetchLocationThenWeather(by: viewModel.initialLocation)
@@ -74,24 +75,28 @@ struct WeatherMainView: View {
     
     var suggestionsView: some View {
         VStack(alignment: .leading, spacing: 14) {
-            Text("Suggestions")
-                .font(.title3)
-                .fontWeight(.bold)
-            ForEach(filteredSuggestions, id: \.self) { text in
-                Text(text)
-                    .contentShape(Rectangle())
-                    .searchCompletion(text)
-                    .onTapGesture {
-                        searchQuery = text
-                        Task { await viewModel.fetchLocationThenWeather(by: text) }
-                    }
+            if searchQuery.count == 0 {
+                Text("Suggestions")
+                    .font(.title3)
+                    .fontWeight(.bold)
+                ForEach(filteredSuggestions, id: \.self) { text in
+                    Text(text)
+                        .contentShape(Rectangle())
+                        .searchCompletion(text)
+                        .onTapGesture {
+                            searchQuery = text
+                            Task { await viewModel.fetchLocationThenWeather(by: text) }
+                        }
+                }
+                Spacer()
+                    .frame(height: 10)
+                Text("Locations")
+                    .font(.title3)
+                    .fontWeight(.bold)
+                currentLocationButton
+            } else {
+                Text("Insert a location and enter to search")
             }
-            Spacer()
-                .frame(height: 10)
-            Text("Locations")
-                .font(.title3)
-                .fontWeight(.bold)
-            currentLocationButton
             Spacer()
         }
         
