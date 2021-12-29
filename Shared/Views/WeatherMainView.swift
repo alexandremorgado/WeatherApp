@@ -55,6 +55,7 @@ struct WeatherMainView: View {
             #else
             .navigationBarTitleDisplayMode(.inline)
             #endif
+            //MARK: - STORY-1
             .searchable(
                 text: $searchQuery,
                 placement: searchPlacement, 
@@ -62,7 +63,7 @@ struct WeatherMainView: View {
             ) {
                 switch viewModel.viewStatus {
                 case .idle, .weathersLoaded, .empty, .error:
-                    suggestionsView
+                    searchSuggestionsView
                 default:
                     EmptyView()
                 }
@@ -90,7 +91,7 @@ struct WeatherMainView: View {
         }
     }
     
-    var suggestionsView: some View {
+    var searchSuggestionsView: some View {
         VStack(alignment: .leading, spacing: 14) {
             if searchQuery.count == 0 {
                 Text("Suggestions")
@@ -100,6 +101,7 @@ struct WeatherMainView: View {
                     Text(text)
                         .contentShape(Rectangle())
                         .searchCompletion(text)
+                        //MARK: - STORY-2
                         .onTapGesture {
                             searchQuery = text
                             Task { await viewModel.fetchLocationThenWeather(by: text) }
@@ -122,6 +124,7 @@ struct WeatherMainView: View {
     }
     
     #if !os(macOS)
+    //MARK: - STORY-5
     var currentLocationButton: some View  {
         LocationButton {
             viewModel.updateViewStatus(newStatus: .fetchingCurrentLocation)

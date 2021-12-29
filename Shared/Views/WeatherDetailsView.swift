@@ -9,6 +9,7 @@ import SwiftUI
 import MapKit
 import CoreLocation
 
+//MARK: - STORY-3
 struct WeatherDetailsView: View {
     
     let weathers: [Weather]
@@ -52,6 +53,7 @@ struct WeatherDetailsView: View {
         }
     }
     
+    //MARK: - STORY-6
     func weatherContentView(_ weather: Weather) -> some View {
         VStack(alignment: .center, spacing: 10) {
             Text(weather.applicableDate.formatted(date: .long, time: .omitted))
@@ -120,6 +122,7 @@ struct WeatherDetailsView: View {
         .padding(.bottom, 40)
     }
     
+    //MARK: - STORY-4
     func mapView(coordinate: CLLocationCoordinate2D) -> some View {
         Map(coordinateRegion: .constant(MKCoordinateRegion(center: coordinate, latitudinalMeters: 8000, longitudinalMeters: 500)))
             .frame(minHeight: 188, maxHeight: .infinity)

@@ -72,6 +72,7 @@ struct WeatherResultsView: View {
                             .padding(.vertical, 5)
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .contentShape(Rectangle())
+                            //MARK: - STORY-2
                             .onTapGesture {
                                 onSelectLocation?(location)
                             }
