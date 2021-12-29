@@ -30,12 +30,24 @@ extension Weather {
         (theTemp * 1.8) + 32
     }
     
-    var fahrenheitTempText: String {
+    var fahrenheitTempFormatted: String {
         "\(Int(fahrenheitTemp))"// º ℉"
     }
     
-    var predictabilityText: String {
+    var predictabilityFormatted: String {
         "\(predictability)"
+    }
+    
+    var airPressureFormatted: String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.maximumFractionDigits = 0
+        let formattedValue = formatter.string(from: NSNumber(value: airPressure)) ?? "\(Int(airPressure))"
+        return "\(formattedValue) hPa"
+    }
+    
+    var humidityFormatted: String {
+        "\(Int(humidity))%"
     }
     
     var iconUrlString: String {
