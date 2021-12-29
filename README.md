@@ -9,6 +9,9 @@ This project was a implementend in 2 days to solve a "Take Home Code Challenge".
 - CoreLocation
 - MapKit 
 
+# Requirements  
+- Xcode 13.2.1 +
+
 # Weather API
 The app uses [MetaWeather API](https://www.metaweather.com/api) for fetching locations and the 5 day forecast for a given location. 
 That’s why MetaWeather was choosen: 
