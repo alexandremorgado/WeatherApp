@@ -13,7 +13,12 @@ class WeatherViewModel: ObservableObject {
     @Published var fetchedLocations: [Location] = []
     
     @Published var weathers: [Weather] = []
-    @Published var viewStatus = ViewStatus.idle
+    @Published private(set) var viewStatus = ViewStatus.idle
+    
+    let searchSuggestions: [String] = [
+        "Auckland", "Barcelona", "London", "New York", "San Francisco", "Paris", "Rio de Janeiro"
+    ]
+    let initialLocation = "San Francisco"
     
     func fetchLocations(by params: LocationParams) async {
         updateViewStatus(newStatus: .fetchingLocations)

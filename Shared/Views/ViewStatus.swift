@@ -13,6 +13,7 @@ enum ViewStatus: Equatable {
     case locationsLoaded([Location])
     case fetchingWeather
     case weathersLoaded([Weather], location: Location)
+    case fetchingCurrentLocation
     case empty
     case error(message: String)
 }
