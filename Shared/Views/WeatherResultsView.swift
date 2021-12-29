@@ -59,21 +59,38 @@ struct WeatherResultsView: View {
     }
     
     func locationsList(_ locations: [Location]) -> some View {
-        List(locations) { location in
-            Text(location.title)
-                .padding(.vertical, 5)
-                .contentShape(Rectangle())
-                .onTapGesture {
-                    onSelectLocation?(location)
+        VStack(alignment: .leading, spacing: 0.0) {
+            Text(locations.count > 0 ? "Locations found:" : "No locations found")
+                .font(.callout)
+                .foregroundColor(.secondary)
+                .padding()
+            if locations.count > 0 {
+                VStack {
+                    ForEach(locations) { location in
+                        Text(location.title)
+                            .padding([.horizontal])
+                            .padding(.vertical, 5)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .contentShape(Rectangle())
+                            .onTapGesture {
+                                onSelectLocation?(location)
+                            }
+                    }
+                    Spacer()
                 }
+            }
         }
-        .listStyle(.insetGrouped)
     }
     
 }
 
 struct WeatherResultView_Previews: PreviewProvider {
     static var previews: some View {
-        WeatherResultsView(viewStatus: .idle)
+        NavigationView {
+            WeatherResultsView(
+                viewStatus: .locationsLoaded([Location.sample, Location(woeid: 123, title: "Paris", lattLong: nil)])
+            )
+        }
+        .environment(\.colorScheme, .dark)
     }
 }
