@@ -128,6 +128,7 @@ struct WeatherDetailsView: View {
             .frame(minHeight: 188, maxHeight: .infinity)
             .cornerRadius(10)
             .padding(.horizontal)
+            .frame(minHeight: 168, maxHeight: .infinity)
     }
     
 }
