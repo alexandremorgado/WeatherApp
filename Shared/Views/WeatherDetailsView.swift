@@ -14,45 +14,62 @@ struct WeatherDetailsView: View {
     let weathers: [Weather]
     let location: Location
     
-    @State private var currentWeather: Weather?
+    @State private var selectedWeatherIndex: Int = 0
+    @State private var tempInFahrenheit = true
     
     var body: some View {
         ZStack {
             BackgroundView()
-            ScrollView {
-                if let weather = currentWeather {
-                    VStack(alignment: .center, spacing: 10) {
-                        Text(location.title)
-                            .font(.title)
-                            .fontWeight(.light)
-                        
-                        HStack(alignment: .top) {
-                            Text("\(weather.fahrenheitTempFormatted)")
-                                .font(.system(size: 58))
-                            Text("℉")
-                                .padding(.top, 10)
-                        }
-                        .padding(.leading)
-                        
-                        stateView(weather: weather)
-                        
-                        pressureAndHumidityView(weather: weather)
-                        
-                        if let coordinate = location.coordinate {
-                            mapView(coordinate: coordinate)
-                        }
+            VStack(alignment: .center, spacing: 20) {
+                Text(location.title)
+                    .font(.title)
+                    .fontWeight(.semibold)
+                    .padding()
+                TabView(selection: $selectedWeatherIndex) {
+                    ForEach(weathers) { weather in
+                        weatherContentView(weather)
                     }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
+                .tabViewStyle(.page(indexDisplayMode: .always))
+                .layoutPriority(10)
+                
+                if let coordinate = location.coordinate {
+                    mapView(coordinate: coordinate)
+                        .layoutPriority(5)
+                    Spacer()
+                }
+                
+                Spacer()
             }
         }
         .colorScheme(.dark)
         .onAppear {
-            currentWeather = weathers.first
+            selectedWeatherIndex = 0
         }
     }
     
-    func stateView(weather: Weather) -> some View {
+    func weatherContentView(_ weather: Weather) -> some View {
+        VStack(alignment: .center, spacing: 10) {
+            Text(weather.applicableDate.formatted(date: .long, time: .omitted))
+                .font(.title3)
+            
+            HStack(alignment: .top) {
+                Text(tempInFahrenheit ? weather.fahrenheitTempFormatted : weather.celsiusTempFormatted)
+                    .font(.system(size: 64))
+                Text(tempInFahrenheit ? "℉" : "℃")
+                    .padding(.top, 10)
+            }
+            .padding(.leading)
+            .onTapGesture {
+                withAnimation { tempInFahrenheit.toggle() }
+            }
+            
+            stateView(weather)
+            pressureAndHumidityView(weather)
+        }
+    }
+    
+    func stateView(_ weather: Weather) -> some View {
         HStack {
             AsyncImage(
                 url: weather.iconURL,
@@ -72,7 +89,7 @@ struct WeatherDetailsView: View {
         }
     }
     
-    func pressureAndHumidityView(weather: Weather) -> some View {
+    func pressureAndHumidityView(_ weather: Weather) -> some View {
         HStack(spacing: 15) {
             VStack(alignment: .leading, spacing: 10) {
                 Text("Pressure")
@@ -92,23 +109,31 @@ struct WeatherDetailsView: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .boxShape()
         }
-        .padding([.horizontal, .top])
+        .padding()
+        .padding(.bottom, 40)
     }
     
     func mapView(coordinate: CLLocationCoordinate2D) -> some View {
         Map(coordinateRegion: .constant(MKCoordinateRegion(center: coordinate, latitudinalMeters: 8000, longitudinalMeters: 500)))
-            .frame(height: 280)
+            .frame(minHeight: 188, maxHeight: .infinity)
             .cornerRadius(10)
-            .padding()
+            .padding(.horizontal)
     }
     
 }
 
 struct WeatherDetailsView_Previews: PreviewProvider {
+    
+    static let devices: [String] = ["iPhone SE (2nd generation)", "iPhone 13 Pro Max", "iPad Air (4th generation)"]
+    
     static var previews: some View {
-        WeatherDetailsView(
-            weathers: [Weather.sample],
-            location: Location.sample
-        )
+        ForEach(devices, id: \.self) { device in
+            WeatherDetailsView(
+                weathers: [Weather.sample],
+                location: Location.sample
+            )
+                .previewDevice(PreviewDevice(rawValue: device))
+                .previewDisplayName(device)
+        }
     }
 }

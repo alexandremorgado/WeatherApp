@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class WeatherViewModel: ObservableObject {
     
@@ -66,7 +67,9 @@ class WeatherViewModel: ObservableObject {
     
     func selectLocation(_ location: Location) {
         DispatchQueue.main.async { [weak self] in
-            self?.currentLocation = location
+            withAnimation {
+                self?.currentLocation = location                
+            }
         }
     }
     

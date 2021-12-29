@@ -31,7 +31,11 @@ extension Weather {
     }
     
     var fahrenheitTempFormatted: String {
-        "\(Int(fahrenheitTemp))"// º ℉"
+        "\(Int(fahrenheitTemp))"
+    }
+    
+    var celsiusTempFormatted: String {
+        "\(Int(theTemp))"
     }
     
     var predictabilityFormatted: String {
