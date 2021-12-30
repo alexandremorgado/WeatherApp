@@ -1,5 +1,5 @@
 # The Weather
-A simple Universal (iOS and macOS) weather app that can take a location input, then display some details about the weather. 
+A simple universal (iOS and macOS) weather app that can take a location input, then display some details about the weather. 
 This project was a implementend in 2 days to solve a "Take Home Code Challenge".  
 
 ## Tech stack 
